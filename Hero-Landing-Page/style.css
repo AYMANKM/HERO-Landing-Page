@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --color-azul: #1090cb;
+  --color-title: #000000;
+  --color-span: #5c5c5c;
+  --color-white: #ffffff;
+}
+
+.hero {
+  background-color: #1090cb33;
+  height: 100svh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+.info {
+  width: 40%;
+  max-width: 500px;
+  min-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.info h1 {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.hero img {
+  border: none;
+  border-radius: 20px;
+  width: 50%;
+  max-width: 500px;
+  min-width: 400px;
+  filter: drop-shadow(10px 5px 5px grey);
+  /*animation: juego 4s infinite;*/
+}
+
+/*animtation*/
+@keyframes juego {
+  0% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 30px;
+}
+
+.buttons button:first-child {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--color-azul);
+  color: var(--color-white);
+  border: 1px solid var(--color-azul);
+}
+
+.buttons button:last-child {
+  padding: 10px 20px;
+  border: 1px solid var(--color-azul);
+  border-radius: 10px;
+  background-color: var(--color-white);
+  color: var(--color-azul);
+}
+
+@media (max-width: 500px) {
+  .hero .info {
+    padding: 40px;
+  }
+}
+
+@media (max-width:431){
+    img{
+        padding:0px  20px;
+    }
+}
+
+@media (max-width: 391px) {
+  .buttons {
+    margin-top: 20px;
+
+    flex-direction: column;
+  }
+  img {
+    padding: 0px 30px;
+    border: 5px solid greenyellow;
+  }
+}
